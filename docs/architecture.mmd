@@ -1,0 +1,6 @@
+flowchart LR
+    A[Client] -->|POST /analyze| B[FastAPI App]
+    B -->|Validate Input| C[TextRequest Model]
+    C -->|Process| D[analyze_text Function]
+    D -->|Return Dict| E[TextResponse Model]
+    E -->|JSON| A
